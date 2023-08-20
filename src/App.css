@@ -1,0 +1,38 @@
+#root {
+  /* max-width: 1300px; */
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+/* nav bar style*/
+.navbar{
+  background-color: #e3f2fd;
+  font-weight: bold;
+}
+/* .nav-item:hover{
+  text-decoration:3px rgb(29, 115, 141) underline;
+  font-size: large;
+} */
+
+.nav-link {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+  margin: 0 10px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust this value to control the gap between link and underline */
+  width: 100%;
+  height: 3px; /* Height of the custom underline */
+  background-color: rgb(29, 115, 141);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-item:hover .nav-link::after {
+  opacity: 1; /* Show the underline on hover */
+}
